@@ -1,6 +1,6 @@
 # OCR Scanner – PDF & Text
 
-A professional static website for the on-device Android app `com.chandra.ocr.offline`, release 1.0.1 (5).
+A professional static website for the on-device Android app `com.chandra.ocr.offline`, release 1.1.0 (6).
 
 **Website:** https://metosapps.github.io/ocr-scanner-website/
 
@@ -39,3 +39,7 @@ The Galaxy Store download link will be added once the listing is publicly availa
 Only website assets are included. Android binaries, backend source, signing material and provider credentials do not belong in this repository. No advertising, analytics, document uploads, contact form backend or external font scripts are added.
 
 The app remains an independent product; Samsung Galaxy Store and third-party component trademarks belong to their respective owners. Website text and artwork have not been assigned an open-source license; third-party notices apply to their original components.
+
+## Free and Pro
+
+From 1.1.0: Free allows 3 pages per document and TXT export. Pro allows 25 pages and Markdown/HTML file exports, purchased once through Samsung IAP. Approved proposed base price: USD 4.99; Galaxy Store is authoritative for local prices. Buying and restoring require internet and a Samsung account; OCR remains on-device. The app release and IAP product must be available before purchases can occur.

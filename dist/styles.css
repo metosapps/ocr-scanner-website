@@ -7,3 +7,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 
 .footer a{overflow-wrap:anywhere}.legal-content section{scroll-margin-top:25px}
+
+.plans-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.plans-grid{grid-template-columns:1fr}}
