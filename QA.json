@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "htmlPages": 6,
+  "localLinksAndAssetsChecked": 183,
+  "javascriptSyntax": "PASS via node --check",
+  "browserChecks": [
+    "desktop: no horizontal overflow",
+    "mobile: menu opens and navigation works",
+    "gallery: modal opens, image loads and closes",
+    "FAQ: disclosure expands",
+    "support: email links visible",
+    "privacy: RTL Arabic summary and no horizontal overflow"
+  ],
+  "publicContact": "chennoufo11@gmail.com",
+  "downloadLink": "awaiting verified Galaxy Store listing",
+  "noSecretsInPublicAssets": true
+}

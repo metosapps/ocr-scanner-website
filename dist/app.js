@@ -1,0 +1,10 @@
+const menu = document.querySelector('.menu-button');
+const nav = document.querySelector('.nav-links');
+menu?.addEventListener('click', () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
+nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); menu?.setAttribute('aria-expanded', 'false'); }));
+const gallery = document.querySelector('.gallery');
+document.querySelectorAll('[data-scroll]').forEach(button => button.addEventListener('click', () => { const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches; gallery?.scrollBy({left: Number(button.dataset.scroll) * 280, behavior: reduced ? 'instant' : 'smooth'}); }));
+const dialog = document.querySelector('#screenshot-dialog');
+document.querySelectorAll('.shot').forEach(button => button.addEventListener('click', () => { const img = button.querySelector('img'); dialog.querySelector('img').src = img.src; dialog.querySelector('img').alt = img.alt; dialog.querySelector('.dialog-caption').textContent = button.querySelector('span').textContent; dialog.showModal(); }));
+dialog?.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+dialog?.addEventListener('click', event => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
