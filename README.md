@@ -1,6 +1,6 @@
 # OCR Scanner – PDF & Text
 
-A professional static website for the on-device Android app `com.chandra.ocr.offline`, release 1.1.0 (6).
+A professional static website for the on-device Android app `com.chandra.ocr.offline`, prepared release 1.2.0 (7).
 
 **Website:** https://metosapps.github.io/ocr-scanner-website/
 
@@ -42,4 +42,10 @@ The app remains an independent product; Samsung Galaxy Store and third-party com
 
 ## Free and Pro
 
-From 1.1.0: Free allows 3 pages per document and TXT export. Pro allows 25 pages and Markdown/HTML file exports, purchased once through Samsung IAP. Approved proposed base price: USD 4.99; Galaxy Store is authoritative for local prices. Buying and restoring require internet and a Samsung account; OCR remains on-device. The app release and IAP product must be available before purchases can occur.
+From 1.1.0: Free allows 3 pages per document and TXT export. Pro allows 25 pages, Markdown/HTML file exports and suppresses ads, purchased once through Samsung IAP. Approved proposed base price: USD 4.99; Galaxy Store is authoritative for local prices. Buying and restoring require internet and a Samsung account; OCR remains on-device. The app release and IAP product must be available before purchases can occur.
+
+## Advertising and public configuration
+
+Prepared version 1.2.0 adds Google AdMob Native, App Open and Interstitial placements. The current app requests Google test ads only; commercial ads remain disabled. Test requests still contact Google and can transmit advertising identifiers, connection metadata, interactions and diagnostics. UMP privacy choices gate ad requests; Settings exposes Ad privacy choices when required. Confirmed Pro suppresses ad loading. No document content or OCR language is used as ad targeting information.
+
+The Android app also downloads package-specific public configuration from GitHub over HTTPS and caches it locally. GitHub receives normal connection metadata; documents and purchase receipts are not sent. See the [Privacy Policy](https://metosapps.github.io/ocr-scanner-website/privacy.html#ads). The website itself still contains no ad SDK, analytics or document uploads.

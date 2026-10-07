@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "htmlPages": 6,
-  "localLinksAndAssetsChecked": 187,
+  "localLinksAndAssetsChecked": 191,
   "javascriptSyntax": "PASS via node --check",
   "browserChecks": [
     "desktop: no horizontal overflow",
