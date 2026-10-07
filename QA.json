@@ -1,17 +1,20 @@
 {
   "status": "PASS",
+  "verificationScope": "Current static HTML structure, image alt attributes, local files and fragment targets only.",
   "htmlPages": 6,
   "localLinksAndAssetsChecked": 191,
-  "javascriptSyntax": "PASS via node --check",
-  "browserChecks": [
-    "desktop: no horizontal overflow",
-    "mobile: menu opens and navigation works",
-    "gallery: modal opens, image loads and closes",
-    "FAQ: disclosure expands",
-    "support: email links visible",
-    "privacy: RTL Arabic summary and no horizontal overflow"
-  ],
+  "javascriptSyntax": "Not executed by this script; run node --check dist/app.js separately.",
+  "browserChecks": {
+    "scope": "Prior browser baseline; not rerun by this script or for the current copy change.",
+    "checks": [
+      "desktop: no horizontal overflow",
+      "mobile: menu opens and navigation works",
+      "gallery: modal opens, image loads and closes",
+      "FAQ: disclosure expands",
+      "support: email links visible",
+      "privacy: RTL Arabic summary and no horizontal overflow"
+    ]
+  },
   "publicContact": "chennoufo11@gmail.com",
-  "downloadLink": "awaiting verified Galaxy Store listing",
-  "noSecretsInPublicAssets": true
+  "downloadLink": "awaiting verified Galaxy Store listing"
 }

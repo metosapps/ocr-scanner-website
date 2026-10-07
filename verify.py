@@ -42,6 +42,20 @@ for path, p in pages.items():
         if u.fragment:
             assert target in pages and unquote(u.fragment) in pages[target].ids, f'{path.name}: missing anchor {ref}'
         checked += 1
-result = {'status':'PASS','htmlPages':len(pages),'localLinksAndAssetsChecked':checked,'javascriptSyntax':'PASS via node --check','browserChecks':['desktop: no horizontal overflow','mobile: menu opens and navigation works','gallery: modal opens, image loads and closes','FAQ: disclosure expands','support: email links visible','privacy: RTL Arabic summary and no horizontal overflow'],'publicContact':'chennoufo11@gmail.com','downloadLink':'awaiting verified Galaxy Store listing','noSecretsInPublicAssets':True}
+result = {
+    'status': 'PASS',
+    'verificationScope': 'Current static HTML structure, image alt attributes, local files and fragment targets only.',
+    'htmlPages': len(pages),
+    'localLinksAndAssetsChecked': checked,
+    'javascriptSyntax': 'Not executed by this script; run node --check dist/app.js separately.',
+    'browserChecks': {
+        'scope': 'Prior browser baseline; not rerun by this script or for the current copy change.',
+        'checks': ['desktop: no horizontal overflow', 'mobile: menu opens and navigation works',
+                   'gallery: modal opens, image loads and closes', 'FAQ: disclosure expands',
+                   'support: email links visible', 'privacy: RTL Arabic summary and no horizontal overflow'],
+    },
+    'publicContact': 'chennoufo11@gmail.com',
+    'downloadLink': 'awaiting verified Galaxy Store listing',
+}
 (ROOT / 'QA.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result))
