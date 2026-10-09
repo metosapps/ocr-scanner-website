@@ -1,8 +1,10 @@
 {
   "status": "PASS",
-  "verificationScope": "Current static HTML structure, image alt attributes, local files and fragment targets only.",
+  "verificationScope": "Current static HTML structure, image alt attributes, local links/assets and local/cloud availability/retention disclosures.",
   "htmlPages": 6,
-  "localLinksAndAssetsChecked": 191,
+  "cloudAvailability": "in preparation; unavailable until server/sign-in setup",
+  "advertisingMode": "OFF",
+  "localLinksAndAssetsChecked": 200,
   "javascriptSyntax": "Not executed by this script; run node --check dist/app.js separately.",
   "browserChecks": {
     "scope": "Prior browser baseline; not rerun by this script or for the current copy change.",

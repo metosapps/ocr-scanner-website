@@ -42,10 +42,28 @@ for path, p in pages.items():
         if u.fragment:
             assert target in pages and unquote(u.fragment) in pages[target].ids, f'{path.name}: missing anchor {ref}'
         checked += 1
+# Current public copy must distinguish available local OCR from unconfigured cloud OCR.
+copy = {name: (PUBLIC / name).read_text() for name in ('index.html', 'privacy.html', 'terms.html', 'support.html')}
+assert 'Datalab cloud processing is in preparation and is not currently available.' in copy['index.html']
+assert 'not currently available' in copy['support.html']
+assert 'Cloud OCR is unavailable until' in copy['privacy.html']
+for name, text in copy.items():
+    assert 'Datalab' in text and 'Cloudflare' in text, name
+    assert '24 hours' in text and 'scheduled' in text, name
+    assert 'Google sign-in' in text or 'sign in with Google' in text, name
+    assert 'currently selected' not in text and 'current mode remains TEST' not in text, name
+assert 'test and commercial ads are currently disabled' in copy['index.html'].lower()
+assert 'current advertising mode is OFF' in copy['support.html']
+assert '48 hours after content expiry' in copy['privacy.html']
+assert 'provider deletion guarantee' in copy['privacy.html']
+assert 'applicable service agreement' in copy['privacy.html']
+
 result = {
     'status': 'PASS',
-    'verificationScope': 'Current static HTML structure, image alt attributes, local files and fragment targets only.',
+    'verificationScope': 'Current static HTML structure, image alt attributes, local links/assets and local/cloud availability/retention disclosures.',
     'htmlPages': len(pages),
+    'cloudAvailability': 'in preparation; unavailable until server/sign-in setup',
+    'advertisingMode': 'OFF',
     'localLinksAndAssetsChecked': checked,
     'javascriptSyntax': 'Not executed by this script; run node --check dist/app.js separately.',
     'browserChecks': {
