@@ -52,11 +52,11 @@ for name, text in copy.items():
     assert '24 hours' in text and 'scheduled' in text, name
     assert 'Google sign-in' in text or 'sign in with Google' in text, name
     assert 'currently selected' not in text and 'current mode remains TEST' not in text, name
-assert 'production advertising is enabled through app configuration for supported releases; test ads are disabled' in copy['index.html'].lower()
-assert 'current public remote advertising mode is PRODUCTION' in copy['support.html']
+assert 'google test ads are temporarily enabled through app configuration for supported releases; production ads are disabled' in copy['index.html'].lower()
+assert 'current public remote advertising mode is temporarily TEST' in copy['support.html']
 for name, text in copy.items():
     assert 'privacy choices' in text and 'Pro' in text and 'availability' in text, name
-assert 'public remote mode is PRODUCTION' in copy['privacy.html']
+assert 'public remote mode is temporarily TEST' in copy['privacy.html']
 assert 'Native, App Open and Interstitial' in copy['terms.html']
 assert '48 hours after content expiry' in copy['privacy.html']
 assert 'provider deletion guarantee' in copy['privacy.html']
@@ -67,7 +67,7 @@ result = {
     'verificationScope': 'Current static HTML structure, image alt attributes, local links/assets and local/cloud availability/retention disclosures.',
     'htmlPages': len(pages),
     'cloudAvailability': 'in preparation; unavailable until server/sign-in setup',
-    'advertisingMode': 'PRODUCTION enabled remotely; delivery depends on eligibility and ad availability',
+    'advertisingMode': 'TEST enabled remotely for supported releases; production disabled; eligibility gates apply',
     'localLinksAndAssetsChecked': checked,
     'javascriptSyntax': 'Not executed by this script; run node --check dist/app.js separately.',
     'browserChecks': {

@@ -1,6 +1,6 @@
 # OCR Scanner – PDF & Text
 
-Static product website for Android package `com.chandra.ocr.offline`. The existing on-device engine supports 13 languages. The cloud-capable 1.4.0 update is in preparation; Datalab cloud processing is **not currently available**. Public remote advertising mode for supported releases is **PRODUCTION**: Native, App Open and Interstitial are enabled, and test ads are disabled. Ad display still depends on applicable privacy choices, confirmed Pro status and service availability.
+Static product website for Android package `com.chandra.ocr.offline`. The existing on-device engine supports 13 languages. The cloud-capable 1.4.0 update is in preparation; Datalab cloud processing is **not currently available**. Public remote advertising mode for supported releases is temporarily **TEST**: Native, App Open and Interstitial use Google test ads, and production ads are disabled. Ad display still depends on applicable privacy choices, confirmed Pro status and service availability.
 
 **Website:** https://metosapps.github.io/ocr-scanner-website/
 
@@ -47,7 +47,7 @@ Before consumer cloud activation, verify the publisher’s applicable Datalab se
 
 ## Advertising
 
-Native, App Open and Interstitial are configuration controlled. The current public remote mode is PRODUCTION for supported releases: Native, App Open and Interstitial commercial placements are enabled; test ads are disabled. Bundled defaults remain disabled until a valid remote or cached configuration is accepted. Earlier clients using the legacy configuration remain OFF. Configuration enablement does not guarantee that an ad will be served. Confirmed Pro and required privacy choices gate ad requests. Document content and OCR language are not used for ad targeting. Remote settings downloaded from package-specific GitHub endpoints do not include documents or receipts. This website does not itself control app advertising or trigger a forced update; the app-specific remote configuration determines the active mode.
+Native, App Open and Interstitial are configuration controlled. The current public remote mode is temporarily TEST for supported releases: Native, App Open and Interstitial use Google test ads; production ads are disabled. Bundled defaults remain disabled until a valid remote or cached configuration is accepted. Earlier clients using the legacy configuration remain OFF. Configuration enablement does not guarantee that an ad will be served. Confirmed Pro and required privacy choices gate ad requests. Document content and OCR language are not used for ad targeting. Remote settings downloaded from package-specific GitHub endpoints do not include documents or receipts. This website does not itself control app advertising or trigger a forced update; the app-specific remote configuration determines the active mode.
 
 ## Policy synchronization
 
