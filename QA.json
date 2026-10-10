@@ -3,7 +3,7 @@
   "verificationScope": "Current static HTML structure, image alt attributes, local links/assets and local/cloud availability/retention disclosures.",
   "htmlPages": 6,
   "cloudAvailability": "in preparation; unavailable until server/sign-in setup",
-  "advertisingMode": "OFF",
+  "advertisingMode": "PRODUCTION enabled remotely; delivery depends on eligibility and ad availability",
   "localLinksAndAssetsChecked": 200,
   "javascriptSyntax": "Not executed by this script; run node --check dist/app.js separately.",
   "browserChecks": {
